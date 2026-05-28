@@ -12,12 +12,19 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
+const base = import.meta.env.BASE_URL;
 
 const dateLabel = new Intl.DateTimeFormat('ja-JP', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 }).format(article.data.pubDate);
+
+const thumbSrc = article.data.thumb
+  ? article.data.thumb.startsWith('http') || article.data.thumb.startsWith('/')
+    ? article.data.thumb
+    : `${base}${article.data.thumb}`
+  : null;
 ---
 <BaseLayout title={`${article.data.title} (プレビュー)`} description={article.data.description} noindex={true}>
   <article class="container">
@@ -27,6 +34,11 @@ const dateLabel = new Intl.DateTimeFormat('ja-JP', {
       </div>
       <h1>{article.data.title}</h1>
       <div class="article-meta">公開予定日: {dateLabel}</div>
+      {thumbSrc && (
+        <div class="article-hero">
+          <img src={thumbSrc} alt={article.data.title} />
+        </div>
+      )}
       <Content />
     </div>
   </article>
