@@ -16,6 +16,9 @@ const navItems = [
   <nav class="site-footer__nav">
     {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
   </nav>
+  <div class="site-footer__disclaimer">
+    本サイトは公開情報をもとに整理した一般的な情報提供を目的としており、医療行為・診断・治療を提供するものではありません。具体的な症状・治療については医師・薬剤師にご相談ください。
+  </div>
   <div class="site-footer__copy">
     &copy; {year} {SITE_TITLE}
   </div>

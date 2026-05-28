@@ -12,8 +12,8 @@ const navItems = [
 ---
 <header class="site-header" id="top">
   <div class="site-header__inner">
-    <a href={base} class="site-header__logo">
-      <span>{SITE_TITLE}</span>
+    <a href={base} class="site-header__logo" aria-label={SITE_TITLE}>
+      <img src={`${base}logo.png`} alt={SITE_TITLE} class="site-header__logo-img" width="220" height="64" />
     </a>
     <nav class="site-header__nav">
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
