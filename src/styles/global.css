@@ -86,20 +86,6 @@ img {
   white-space: nowrap;
 }
 
-.site-header__logo-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  background: var(--color-primary);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
 .site-header__nav {
   display: flex;
   gap: 1.75rem;
