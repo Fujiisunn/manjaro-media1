@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => data.draft);
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+const dateLabel = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(article.data.pubDate);
+---
+<BaseLayout title={`${article.data.title} (プレビュー)`} description={article.data.description}>
+  <article class="container">
+    <div class="article-body">
+      <div style="background:#fff7e6;border-left:4px solid #f59e0b;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:0.85rem;color:#92400e;">
+        この記事は <strong>未公開のプレビュー</strong> です。社内確認用にパスワードでアクセス制限されています。
+      </div>
+      <h1>{article.data.title}</h1>
+      <div class="article-meta">公開予定日: {dateLabel}</div>
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

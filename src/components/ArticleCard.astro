@@ -1,0 +1,40 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  date?: Date;
+  category?: string;
+}
+
+const { href, title, description, date, category = 'マンジャロ' } = Astro.props;
+const dateLabel = date
+  ? new Intl.DateTimeFormat('ja-JP', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(date)
+  : null;
+---
+<a href={href} class="article-card">
+  <div class="article-card__media">
+    <span class="article-card__category">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/>
+      </svg>
+      {category}
+    </span>
+    <span class="article-card__media-placeholder">M</span>
+  </div>
+  <h2 class="article-card__title">{title}</h2>
+  {description && <p class="article-card__desc">{description}</p>}
+  {dateLabel && (
+    <span class="article-card__date">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      {dateLabel}
+    </span>
+  )}
+</a>

@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE } from '../consts';
+const base = import.meta.env.BASE_URL;
+
+const navItems = [
+  { label: 'TOP', href: base },
+  { label: 'ARTICLES', href: base },
+  { label: 'CATEGORY', href: base },
+  { label: 'ABOUT', href: `${base}about/` },
+  { label: 'CONTACT', href: `${base}contact/` },
+];
+---
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <a href={base} class="site-header__logo">
+      <span class="site-header__logo-mark">M</span>
+      <span>{SITE_TITLE}</span>
+    </a>
+    <nav class="site-header__nav">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+  </div>
+</header>

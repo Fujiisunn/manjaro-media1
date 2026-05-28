@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Sidebar from '../../components/Sidebar.astro';
+
+const base = import.meta.env.BASE_URL;
+const drafts = (await getCollection('articles', ({ data }) => data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+<BaseLayout title="プレビュー(社内確認用)">
+  <nav class="breadcrumb" aria-label="パンくず">
+    <a href={base}>ホーム</a>
+    <span class="breadcrumb__sep">›</span>
+    <span>プレビュー</span>
+  </nav>
+
+  <div class="layout">
+    <div>
+      <div class="page-header">
+        <h1 class="page-header__title">プレビュー</h1>
+        <span class="page-header__suffix">– 社内確認用(未公開記事) –</span>
+      </div>
+
+      {drafts.length === 0 ? (
+        <div class="empty-state">下書き記事はありません。</div>
+      ) : (
+        <div class="article-grid">
+          {drafts.map((article) => (
+            <ArticleCard
+              href={`${base}preview/${article.id}/`}
+              title={article.data.title}
+              description={article.data.description}
+              date={article.data.pubDate}
+              category={article.data.category}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+    <Sidebar />
+  </div>
+</BaseLayout>

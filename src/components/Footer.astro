@@ -1,0 +1,22 @@
+---
+import { SITE_TITLE } from '../consts';
+const base = import.meta.env.BASE_URL;
+const year = new Date().getFullYear();
+
+const navItems = [
+  { label: 'TOP', href: base },
+  { label: 'ARTICLES', href: base },
+  { label: 'CATEGORY', href: base },
+  { label: 'ABOUT', href: `${base}about/` },
+  { label: 'CONTACT', href: `${base}contact/` },
+  { label: 'PRIVACY', href: `${base}privacy/` },
+];
+---
+<footer class="site-footer">
+  <nav class="site-footer__nav">
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+  </nav>
+  <div class="site-footer__copy">
+    &copy; {year} {SITE_TITLE}
+  </div>
+</footer>
