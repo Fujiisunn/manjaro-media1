@@ -564,20 +564,21 @@ img {
 
 /* 注意喚起ノート: <div class="note">…</div> / <div class="note note--warn">…</div> */
 .article-body .note {
-  display: flex;
-  gap: 0.7rem;
+  position: relative;
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem 0.9rem 2.7rem;
   margin: 1.25rem 0;
   background: var(--color-bg-soft);
   font-size: 0.88rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .article-body .note::before {
   content: "i";
-  flex-shrink: 0;
+  position: absolute;
+  top: 0.95rem;
+  left: 0.85rem;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -588,7 +589,6 @@ img {
   justify-content: center;
   font-weight: 700;
   font-size: 0.75rem;
-  margin-top: 0.1rem;
   font-family: Georgia, serif;
   font-style: italic;
 }
@@ -654,6 +654,18 @@ img {
 .article-body .toc a:hover {
   color: var(--color-primary);
   text-decoration: underline;
+}
+
+/* プレビュー用バナー */
+.article-body .preview-banner {
+  background: #fff7e6;
+  border: 1px solid #f5d590;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: #92400e;
+  line-height: 1.6;
 }
 
 .empty-state {

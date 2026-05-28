@@ -22,8 +22,8 @@ const dateLabel = new Intl.DateTimeFormat('ja-JP', {
 <BaseLayout title={`${article.data.title} (プレビュー)`} description={article.data.description} noindex={true}>
   <article class="container">
     <div class="article-body">
-      <div style="background:#fff7e6;border-left:4px solid #f59e0b;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:0.85rem;color:#92400e;">
-        この記事は <strong>未公開のプレビュー</strong> です。社内確認用にパスワードでアクセス制限されています。
+      <div class="preview-banner">
+        この記事は <strong>未公開のプレビュー</strong> です。社内確認用のパスワード制限付きページです。
       </div>
       <h1>{article.data.title}</h1>
       <div class="article-meta">公開予定日: {dateLabel}</div>
