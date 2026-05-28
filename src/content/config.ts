@@ -10,6 +10,9 @@ const articles = defineCollection({
     updatedDate: z.coerce.date().optional(),
     category: z.string().optional().default('マンジャロ'),
     draft: z.boolean().optional().default(false),
+    thumb: z.string().optional(),
+    thumbHeadline: z.string().optional(),
+    thumbAccent: z.string().optional(),
   }),
 });
 

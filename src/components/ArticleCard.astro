@@ -5,15 +5,22 @@ interface Props {
   description?: string;
   date?: Date;
   category?: string;
+  thumb?: string;
 }
 
-const { href, title, description, date, category = 'マンジャロ' } = Astro.props;
+const { href, title, description, date, category = 'マンジャロ', thumb } = Astro.props;
+const base = import.meta.env.BASE_URL;
 const dateLabel = date
   ? new Intl.DateTimeFormat('ja-JP', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     }).format(date)
+  : null;
+const thumbSrc = thumb
+  ? thumb.startsWith('http') || thumb.startsWith('/')
+    ? thumb
+    : `${base}${thumb}`
   : null;
 ---
 <a href={href} class="article-card">
@@ -24,7 +31,11 @@ const dateLabel = date
       </svg>
       {category}
     </span>
-    <span class="article-card__media-placeholder">M</span>
+    {thumbSrc ? (
+      <img src={thumbSrc} alt="" class="article-card__media-img" loading="lazy" />
+    ) : (
+      <span class="article-card__media-placeholder">M</span>
+    )}
   </div>
   <h2 class="article-card__title">{title}</h2>
   {description && <p class="article-card__desc">{description}</p>}
