@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "encrypt:preview": "staticrypt dist/preview -r -d dist --short --remember 30",
-    "build:full": "npm run build && npm run encrypt:preview",
+    "inject:preview-noindex": "node scripts/inject-preview-noindex.mjs",
+    "build:full": "npm run build && npm run encrypt:preview && npm run inject:preview-noindex",
     "preview": "astro preview",
     "astro": "astro"
   },

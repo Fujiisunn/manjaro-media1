@@ -19,7 +19,7 @@ const dateLabel = new Intl.DateTimeFormat('ja-JP', {
   day: 'numeric',
 }).format(article.data.pubDate);
 ---
-<BaseLayout title={`${article.data.title} (プレビュー)`} description={article.data.description}>
+<BaseLayout title={`${article.data.title} (プレビュー)`} description={article.data.description} noindex={true}>
   <article class="container">
     <div class="article-body">
       <div style="background:#fff7e6;border-left:4px solid #f59e0b;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:0.85rem;color:#92400e;">

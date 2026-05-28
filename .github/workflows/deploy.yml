@@ -43,6 +43,7 @@ jobs:
               exit 1
             fi
             npx staticrypt dist/preview -r -d dist --short --remember 30
+            node scripts/inject-preview-noindex.mjs
           else
             echo "プレビュー記事(draft: true)はありません。スキップします。"
           fi

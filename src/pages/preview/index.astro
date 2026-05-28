@@ -9,7 +9,7 @@ const drafts = (await getCollection('articles', ({ data }) => data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
-<BaseLayout title="プレビュー(社内確認用)">
+<BaseLayout title="プレビュー(社内確認用)" noindex={true}>
   <nav class="breadcrumb" aria-label="パンくず">
     <a href={base}>ホーム</a>
     <span class="breadcrumb__sep">›</span>
