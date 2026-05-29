@@ -730,6 +730,44 @@ img {
   line-height: 1.6;
 }
 
+/* 訴求文ブロック(枠内) */
+.article-body .ad-slot__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.article-body .ad-slot__hook {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.article-body .ad-slot__sub {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.article-body .ad-slot__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-top: 0.15rem;
+  line-height: 1.4;
+}
+
+.article-body .ad-slot__arrow {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
 /* スティッキー底辺(モバイルバナー想定: 高さ 80px 程度) */
 .article-body .ad-slot--sticky {
   position: fixed;
@@ -741,18 +779,29 @@ img {
   border: 2px dashed #ef4444;
   border-bottom: none;
   border-radius: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    #fef3c7,
-    #fef3c7 12px,
-    #fde68a 12px,
-    #fde68a 24px
-  );
-  padding: 0.6rem 1rem;
+  background: #fff8e6;
+  padding: 0.6rem 1.2rem;
   aspect-ratio: auto;
   height: 80px;
   width: 100%;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.article-body .ad-slot--sticky .ad-slot__sticky-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.article-body .ad-slot--sticky .ad-slot__sticky-arrow {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1;
 }
 
 .article-body .ad-slot--sticky .ad-slot__number {
@@ -833,6 +882,18 @@ body:has(.ad-slot--sticky) {
   font-size: 0.8rem;
   color: #4b5563;
   line-height: 1.5;
+}
+
+.article-body .ad-slot--character .ad-slot__bubble-text {
+  font-size: 0.85rem;
+  color: #1f2937;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.article-body .ad-slot--character .ad-slot__bubble-text strong {
+  color: var(--color-primary-dark);
+  font-weight: 700;
 }
 
 .article-body .ad-slot--character .ad-slot__char {
