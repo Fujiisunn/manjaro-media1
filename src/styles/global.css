@@ -888,19 +888,23 @@ img {
 }
 
 /* apply ボタン内の pre/post テキスト切り替え + ステータスバッジ */
-.article-body .clinic-compare__apply-pre {
+.article-body .clinic-compare__apply-pre,
+.article-body .clinic-compare__badge-pre {
   display: inline;
 }
 
-.article-body .clinic-compare__apply-post {
+.article-body .clinic-compare__apply-post,
+.article-body .clinic-compare__badge-post {
   display: none;
 }
 
-.article-body .clinic-compare.is-applied .clinic-compare__apply-pre {
+.article-body .clinic-compare.is-applied .clinic-compare__apply-pre,
+.article-body .clinic-compare.is-applied .clinic-compare__badge-pre {
   display: none;
 }
 
-.article-body .clinic-compare.is-applied .clinic-compare__apply-post {
+.article-body .clinic-compare.is-applied .clinic-compare__apply-post,
+.article-body .clinic-compare.is-applied .clinic-compare__badge-post {
   display: inline;
 }
 
