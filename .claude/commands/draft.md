@@ -183,7 +183,7 @@ thumb: articles/<slug>.png  # 画像未配置でも frontmatter には書く
 <tr><td>イースト駅前クリニック</td><td>¥21,100</td></tr>
 </tbody>
 </table>
-<a class="clinic-compare__apply" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener" data-apply-cta>
+<a class="clinic-compare__apply" href="https://clinic.dmm.com/appointment?subject_name=%E5%A5%B3%E6%80%A7%E3%83%A1%E3%83%87%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%80%E3%82%A4%E3%82%A8%E3%83%83%E3%83%88%E3%83%BB%E8%82%A5%E6%BA%80%E7%97%87&coupon_code=diman161003v&squadbeyond_uid=f5fe4468-7558-4f1e-846b-36b59ee4e432&sb_article_uid=vskXfIeREvxcejXNmQ" target="_blank" rel="noopener" data-apply-cta>
 <span class="clinic-compare__apply-pre">クーポンを適用する →</span>
 <span class="clinic-compare__apply-post"><span class="clinic-compare__apply-status">✓ クーポン適用中</span>DMM 公式でクーポンを使う →</span>
 </a>
