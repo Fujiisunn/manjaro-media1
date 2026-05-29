@@ -766,6 +766,112 @@ body:has(.ad-slot--sticky) {
   padding-bottom: 90px;
 }
 
+/* キャラクター吹き出し型(画面右下にフロート) */
+.article-body .ad-slot--character {
+  position: fixed;
+  right: 16px;
+  bottom: 110px; /* スティッキー底辺(80px)の上に配置 */
+  z-index: 998;
+  width: auto;
+  aspect-ratio: auto;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: left;
+  min-height: 0;
+}
+
+.article-body .ad-slot--character .ad-slot__bubble {
+  position: relative;
+  background: #fff;
+  border: 2px dashed #ef4444;
+  border-radius: 14px;
+  padding: 0.8rem 1rem 0.7rem;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article-body .ad-slot--character .ad-slot__bubble::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: 22px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid #ef4444;
+}
+
+.article-body .ad-slot--character .ad-slot__bubble::before {
+  content: '';
+  position: absolute;
+  right: -7px;
+  bottom: 23px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 9px solid #fff;
+  z-index: 1;
+}
+
+.article-body .ad-slot--character .ad-slot__number {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.article-body .ad-slot--character .ad-slot__label {
+  font-size: 0.8rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.article-body .ad-slot--character .ad-slot__char {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: repeating-linear-gradient(
+    45deg,
+    #fef3c7,
+    #fef3c7 10px,
+    #fde68a 10px,
+    #fde68a 20px
+  );
+  border: 2px dashed #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #92400e;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .article-body .ad-slot--character {
+    bottom: 100px;
+  }
+  .article-body .ad-slot--character .ad-slot__bubble {
+    width: 140px;
+    padding: 0.6rem 0.8rem;
+  }
+  .article-body .ad-slot--character .ad-slot__char {
+    width: 64px;
+    height: 64px;
+  }
+}
+
 /* 記事ヒーロー画像 (タイトル直下の固定枠) */
 .article-body .article-hero {
   position: relative;
