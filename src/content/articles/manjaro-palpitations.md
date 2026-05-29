@@ -1,7 +1,7 @@
 ---
 title: マンジャロ服用中の激しい動悸は要注意サイン!?副作用と緩和ケア
 description: マンジャロ(チルゼパチド)服用中に激しい動悸を感じる方への情報まとめ。添付文書に記載された副作用としての動悸の背景、息苦しさを伴うときの受診目安、薬剤に依存しない一般的な緩和ケア・対処法まで整理しました。
-pubDate: 2026-05-28
+pubDate: 2026-04-12
 category: マンジャロ
 draft: true
 thumb: articles/manjaro-palpitations.png

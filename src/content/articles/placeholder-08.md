@@ -1,7 +1,7 @@
 ---
 title: サンプル記事 08
 description: サイトレイアウト確認用のサンプル記事です。本文・タイトル・画像は後で差し替えてください。
-pubDate: 2026-05-28
+pubDate: 2026-04-20
 category: サンプル
 draft: true
 ---

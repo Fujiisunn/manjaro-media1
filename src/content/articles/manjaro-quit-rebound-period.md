@@ -1,7 +1,7 @@
 ---
 title: マンジャロやめた後の体重増、これってリバウンド!?生理むくみとの見分け方
 description: マンジャロをやめた後に体重が戻ってきた、生理が来てむくみがひどい。リバウンドなのか生理周期の体重変動なのか、見分け方と判断軸を整理。続けるか卒業かで迷う前にチェックしたいポイントもまとめました。
-pubDate: 2026-05-29
+pubDate: 2026-04-18
 category: マンジャロ
 draft: true
 thumb: articles/manjaro-quit-rebound-period.png

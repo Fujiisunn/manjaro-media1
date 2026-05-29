@@ -1,7 +1,7 @@
 ---
 title: マンジャロ未経験者へ。副作用・打ち方・効果が出る頻度をまるっと整理
 description: マンジャロを使ったことがない方に向けた総合ガイド。副作用・将来的なリスク・おすすめの打ち方・「月1で効く?」の真相など、未経験者が検討前に確認しておきたい情報を添付文書とメーカー公表情報から整理しました。
-pubDate: 2026-05-29
+pubDate: 2026-04-23
 category: マンジャロ
 draft: true
 thumb: articles/manjaro-beginner-guide.png
