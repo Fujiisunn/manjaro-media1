@@ -89,6 +89,30 @@ const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
             // 適用済みなら通常遷移
           });
         });
+
+        // 自動 reveal: アセットを「通り過ぎた」タイミングで applyAll
+        // (一度 viewport に入ったあと、また外れた = スクロール過ぎ)
+        if ('IntersectionObserver' in window) {
+          const autoObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.dataset.scrollSeen = '1';
+              } else if (entry.target.dataset.scrollSeen === '1') {
+                const anyApplied = Array.from(compares).some((c) =>
+                  c.classList.contains('is-applied')
+                );
+                if (!anyApplied) {
+                  applyAll();
+                  try {
+                    sessionStorage.setItem(STORAGE_KEY, '1');
+                  } catch (e) {}
+                }
+              }
+            });
+          }, { threshold: 0 });
+
+          compares.forEach((c) => autoObserver.observe(c));
+        }
       });
     </script>
   </body>
