@@ -824,6 +824,15 @@ img {
   transition: all 0.3s ease;
 }
 
+.article-body .clinic-compare__ambassador {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
 .article-body .clinic-compare.is-applied .clinic-compare__badge {
   background: var(--color-primary);
   color: #fff;
