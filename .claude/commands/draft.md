@@ -11,8 +11,8 @@ argument-hint: <mond の質問本文 + 任意の補足>
 
 mond(質問箱アプリ)に届いたマンジャロ関連質問に対し、**ユーザーの代わりに 2 つの出力を一度に作る**:
 
-- **(A) mond 返信案(完成度 7 割)** — mond 上にユーザー本人が投稿する、私目線・端的な返信。**意図的に 7 割にとどめ、残り 3 割は記事へ誘導**する(メディア導線設計)
-- **(B) メディア記事(完成度 10 割)** — マンジャロメディア#1 に掲載する完成記事。`src/content/articles/<slug>.md` に `draft: true` で書き出す
+- **(A) mond 返信案(完成度 7 割)**: mond 上にユーザー本人が投稿する、私目線・端的な返信。**意図的に 7 割にとどめ、残り 3 割は記事へ誘導**する(メディア導線設計)
+- **(B) メディア記事(完成度 10 割)**: マンジャロメディア#1 に掲載する完成記事。`src/content/articles/<slug>.md` に `draft: true` で書き出す
 
 > **重要:** (A) と (B) はワンセット。(B) を先に組み立て、その slug/構成を踏まえて (A) を作ると整合する。
 
@@ -26,6 +26,16 @@ mond(質問箱アプリ)に届いたマンジャロ関連質問に対し、**ユ
    - mond 返信案(コードブロックでそのままコピペ可能に)
    - 記事プレビュー URL: `https://fujiisunn.github.io/manjaro-media1/preview/<slug>/`
    - 「push が必要」の案内
+
+## 文体の全体ルール([[memory: feedback-no-ai-tells]])
+
+(A)/(B) どちらも適用:
+
+- **エムダッシュ「——」「――」「—」 禁止** : AI 生成の典型サイン。句点「。」やコロン「:」、別の繋ぎ語で置き換える
+- 「結論からお伝えすると、」「○○について整理しました」のような硬い導入・AI 定型句 NG
+- 「いかがでしたでしょうか」「ぜひ参考にしてください」のような締め文 NG
+
+生成後に「——」「—」が混入してないか自分で確認すること。
 
 ## 共通: 質問の解釈
 
@@ -45,7 +55,7 @@ mond(質問箱アプリ)に届いたマンジャロ関連質問に対し、**ユ
 
 ---
 
-## (A) mond 返信案 — 7 割設計
+## (A) mond 返信案 / 7 割設計
 
 ### スタイル
 
@@ -87,7 +97,7 @@ mond(質問箱アプリ)に届いたマンジャロ関連質問に対し、**ユ
 
 ---
 
-## (B) メディア記事 — 10 割設計
+## (B) メディア記事 / 10 割設計
 
 ### コンプライアンス([[memory: feedback-compliance]] [[memory: project-persona]])
 
@@ -122,18 +132,18 @@ thumb: articles/<slug>.png  # 画像未配置でも frontmatter には書く
 ### 使えるレイアウト primitives
 
 ```
-<mark>キーフレーズ</mark>                       — 蛍光ハイライト
-<nav class="toc"><div class="toc__title">目次</div> 1. [...] </nav>  — 目次
-<div class="note">…</div>                       — info ノート
-<div class="note note--warn">…</div>            — 警告ノート
-<div class="note note--info">…</div>            — TIP ノート
+<mark>キーフレーズ</mark>                       : 蛍光ハイライト
+<nav class="toc"><div class="toc__title">目次</div> 1. [...] </nav>  : 目次
+<div class="note">…</div>                       : info ノート
+<div class="note note--warn">…</div>            : 警告ノート
+<div class="note note--info">…</div>            : TIP ノート
 <div class="box">
   <div class="box__title">ラベル</div>
   <div class="box__body">本文</div>
-</div>                                          — ラベル付き枠
-<blockquote>…</blockquote>                      — 免責・引用
-| ヘッダ | … |                                  — テーブル
-## / ### / ####                                 — H2(緑バンド) / H3(左アクセント) / H4
+</div>                                          : ラベル付き枠
+<blockquote>…</blockquote>                      : 免責・引用
+| ヘッダ | … |                                  : テーブル
+## / ### / ####                                 : H2(緑バンド) / H3(左アクセント) / H4
 ```
 
 **重要:** HTML タグ内に Markdown を書くときは前後に空行が必要(CommonMark 仕様)。
