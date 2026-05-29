@@ -183,8 +183,8 @@ thumb: articles/<slug>.png  # 画像未配置でも frontmatter には書く
 <tr><td>イースト駅前クリニック</td><td>¥21,100</td></tr>
 </tbody>
 </table>
-<a class="clinic-compare__cta" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener">
-クーポンを受け取る →
+<a class="clinic-compare__apply" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener" data-apply-cta>
+クーポンを適用する →
 </a>
 <p class="clinic-compare__note">
 ※ 上記は各クリニックの公表情報をもとに整理した参考価格(税込・自由診療)。最新の料金・クーポン条件は各公式サイトをご確認ください。

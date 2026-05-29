@@ -31,5 +31,45 @@ const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
     </main>
     <Footer />
     <a href="#top" class="back-to-top" aria-label="ページトップへ">↑</a>
+    <script>
+      // クーポン適用ボタンの2段階クリック制御
+      // 1回目: 価格 reveal(全 clinic-compare を is-applied 状態に)
+      // 2回目: 通常の遷移(DMM へ)
+      document.addEventListener('DOMContentLoaded', () => {
+        const compares = document.querySelectorAll('.clinic-compare');
+        if (!compares.length) return;
+
+        const STORAGE_KEY = 'glp-navi-coupon-applied';
+        const applyButtons = document.querySelectorAll('.clinic-compare__apply');
+
+        function applyAll() {
+          compares.forEach((c) => c.classList.add('is-applied'));
+          applyButtons.forEach((a) => {
+            a.textContent = '公式サイトで使う →';
+          });
+        }
+
+        // セッション内で既に適用済みなら最初から表示
+        try {
+          if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+            applyAll();
+          }
+        } catch (e) {}
+
+        applyButtons.forEach((link) => {
+          link.addEventListener('click', (e) => {
+            const alreadyApplied = link.closest('.clinic-compare').classList.contains('is-applied');
+            if (!alreadyApplied) {
+              e.preventDefault();
+              applyAll();
+              try {
+                sessionStorage.setItem(STORAGE_KEY, '1');
+              } catch (err) {}
+            }
+            // 適用済みなら通常遷移
+          });
+        });
+      });
+    </script>
   </body>
 </html>
