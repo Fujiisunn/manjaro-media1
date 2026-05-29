@@ -684,6 +684,88 @@ img {
   line-height: 1.6;
 }
 
+/* 広告枠プレースホルダー(実寸大、位置検証用) */
+.article-body .ad-slot {
+  position: relative;
+  border: 2px dashed #9ca3af;
+  background: repeating-linear-gradient(
+    45deg,
+    #f9fafb,
+    #f9fafb 12px,
+    #f3f4f6 12px,
+    #f3f4f6 24px
+  );
+  margin: 2rem 0;
+  text-align: center;
+  border-radius: 6px;
+  /* 標準サイズ: 横長バナー (3:2 比率、価格表画像と同サイズ感) */
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.article-body .ad-slot__number {
+  position: absolute;
+  top: -14px;
+  left: 14px;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.article-body .ad-slot__label {
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+/* スティッキー底辺(モバイルバナー想定: 高さ 80px 程度) */
+.article-body .ad-slot--sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  margin: 0;
+  border: 2px dashed #ef4444;
+  border-bottom: none;
+  border-radius: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #fef3c7,
+    #fef3c7 12px,
+    #fde68a 12px,
+    #fde68a 24px
+  );
+  padding: 0.6rem 1rem;
+  aspect-ratio: auto;
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.article-body .ad-slot--sticky .ad-slot__number {
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* スティッキー表示中はページ末尾に余白を確保(コンテンツが隠れないように) */
+body:has(.ad-slot--sticky) {
+  padding-bottom: 90px;
+}
+
 /* 記事ヒーロー画像 (タイトル直下の固定枠) */
 .article-body .article-hero {
   position: relative;
