@@ -184,7 +184,8 @@ thumb: articles/<slug>.png  # 画像未配置でも frontmatter には書く
 </tbody>
 </table>
 <a class="clinic-compare__apply" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener" data-apply-cta>
-クーポンを適用する →
+<span class="clinic-compare__apply-pre">クーポンを適用する →</span>
+<span class="clinic-compare__apply-post"><span class="clinic-compare__apply-status">✓ クーポン適用中</span>DMM 公式でクーポンを使う →</span>
 </a>
 <p class="clinic-compare__note">
 ※ 上記は各クリニックの公表情報をもとに整理した参考価格(税込・自由診療)。最新の料金・クーポン条件は各公式サイトをご確認ください。

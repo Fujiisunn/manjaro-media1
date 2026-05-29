@@ -79,7 +79,8 @@ draft: true
 </table>
 </div>
 <a class="clinic-compare__apply" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener" data-apply-cta>
-クーポンを適用する →
+<span class="clinic-compare__apply-pre">クーポンを適用する →</span>
+<span class="clinic-compare__apply-post"><span class="clinic-compare__apply-status">✓ クーポン適用中</span>DMM 公式でクーポンを使う →</span>
 </a>
 <p class="clinic-compare__note">
 ※ 2026年5月時点・各公式サイトより(税込)。最新の料金・条件は要確認。
@@ -161,7 +162,8 @@ draft: true
 </table>
 </div>
 <a class="clinic-compare__apply" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener" data-apply-cta>
-クーポンを適用する →
+<span class="clinic-compare__apply-pre">クーポンを適用する →</span>
+<span class="clinic-compare__apply-post"><span class="clinic-compare__apply-status">✓ クーポン適用中</span>DMM 公式でクーポンを使う →</span>
 </a>
 <p class="clinic-compare__note">
 ※ 2026年5月時点・各公式サイトより(税込)。最新の料金・条件は要確認。

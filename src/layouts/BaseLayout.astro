@@ -53,16 +53,11 @@ const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 
         function applyAll() {
           compares.forEach((c) => c.classList.add('is-applied'));
-          applyButtons.forEach((a) => {
-            a.textContent = '公式サイトで使う →';
-          });
+          // テキスト切り替えは CSS の pre/post 表示制御で行うため不要
         }
 
         function resetAll() {
           compares.forEach((c) => c.classList.remove('is-applied'));
-          applyButtons.forEach((a) => {
-            a.textContent = 'クーポンを適用する →';
-          });
           try { sessionStorage.removeItem(STORAGE_KEY); } catch (err) {}
         }
 

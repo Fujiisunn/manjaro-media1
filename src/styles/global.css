@@ -887,6 +887,36 @@ img {
   background: var(--color-primary-dark);
 }
 
+/* apply ボタン内の pre/post テキスト切り替え + ステータスバッジ */
+.article-body .clinic-compare__apply-pre {
+  display: inline;
+}
+
+.article-body .clinic-compare__apply-post {
+  display: none;
+}
+
+.article-body .clinic-compare.is-applied .clinic-compare__apply-pre {
+  display: none;
+}
+
+.article-body .clinic-compare.is-applied .clinic-compare__apply-post {
+  display: inline;
+}
+
+.article-body .clinic-compare__apply-status {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin-right: 0.55em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
 /* 「クーポンを適用する」ボタン: 初期は緑、適用後はオレンジでCTA化 */
 .article-body .clinic-compare__apply {
   display: block;
