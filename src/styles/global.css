@@ -684,6 +684,18 @@ img {
   line-height: 1.6;
 }
 
+/* 広告枠リンクのデフォルトスタイル解除 */
+.article-body a.ad-slot {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.article-body a.ad-slot:hover {
+  opacity: 0.92;
+  transition: opacity 0.15s ease;
+}
+
 /* 広告枠プレースホルダー(実寸大、位置検証用) */
 .article-body .ad-slot {
   position: relative;
@@ -898,25 +910,33 @@ body:has(.ad-slot--sticky) {
 
 .article-body .ad-slot--character .ad-slot__char {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background: repeating-linear-gradient(
-    45deg,
-    #fef3c7,
-    #fef3c7 10px,
-    #fde68a 10px,
-    #fde68a 20px
-  );
-  border: 2px dashed #ef4444;
+  overflow: hidden;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  color: #92400e;
-  font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article-body .ad-slot--character .ad-slot__char img {
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+
+.article-body a.ad-slot--character {
+  text-decoration: none;
+}
+
+.article-body a.ad-slot--character:hover .ad-slot__char {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 @media (max-width: 600px) {
@@ -928,8 +948,8 @@ body:has(.ad-slot--sticky) {
     padding: 0.6rem 0.8rem;
   }
   .article-body .ad-slot--character .ad-slot__char {
-    width: 64px;
-    height: 64px;
+    width: 76px;
+    height: 76px;
   }
 }
 
