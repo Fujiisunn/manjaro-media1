@@ -698,8 +698,8 @@ img {
   margin: 2rem 0;
   text-align: center;
   border-radius: 6px;
-  /* 標準サイズ: 横長バナー (3:2 比率、価格表画像と同サイズ感) */
-  aspect-ratio: 3 / 2;
+  /* 標準サイズ: 横長帯バナー (4:1 比率 ≈ 190px 高さ) */
+  aspect-ratio: 4 / 1;
   width: 100%;
   display: flex;
   flex-direction: column;
