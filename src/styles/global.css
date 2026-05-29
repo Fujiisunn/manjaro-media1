@@ -786,6 +786,53 @@ img {
   text-align: left;
 }
 
+/* スマホで縦伸びを抑える */
+@media (max-width: 600px) {
+  .article-body .clinic-compare {
+    padding: 1.1rem 0.85rem 0.9rem;
+    margin: 1.5rem 0;
+  }
+  .article-body .clinic-compare__title {
+    font-size: 0.88rem;
+    margin-bottom: 0.6rem;
+  }
+  .article-body .clinic-compare table {
+    font-size: 0.82rem;
+    margin-bottom: 0.7rem;
+  }
+  .article-body .clinic-compare table th,
+  .article-body .clinic-compare table td {
+    padding: 0.45rem 0.55rem;
+  }
+  .article-body .clinic-compare__badge {
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+    padding: 1px 5px;
+  }
+  .article-body .clinic-compare__highlight td:first-child {
+    line-height: 1.4;
+  }
+  .article-body .clinic-compare__original {
+    font-size: 0.72rem;
+    display: block;
+    margin-right: 0;
+  }
+  .article-body .clinic-compare__discounted {
+    font-size: 0.95rem;
+  }
+  .article-body .clinic-compare__cta {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.88rem;
+    margin: 0.4rem 0 0.5rem;
+  }
+  .article-body .clinic-compare__note {
+    font-size: 0.65rem;
+    line-height: 1.45;
+  }
+}
+
 /* 広告枠リンクのデフォルトスタイル解除 */
 .article-body a.ad-slot {
   text-decoration: none;
