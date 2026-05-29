@@ -684,6 +684,22 @@ img {
   line-height: 1.6;
 }
 
+/* 記事末尾の誘導文(アセット前後) */
+.article-body .closing-lead,
+.article-body .closing-outro {
+  background: var(--color-bg-soft);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.article-body .closing-outro {
+  margin: 1rem 0 1.5rem;
+}
+
 /* クリニック比較表アセット(広告枠⑩) */
 .article-body .clinic-compare {
   position: relative;

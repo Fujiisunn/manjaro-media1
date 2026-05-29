@@ -155,10 +155,50 @@ thumb: articles/<slug>.png  # 画像未配置でも frontmatter には書く
 3. 要注意サイン `note--warn`(危険サイン早出し)
 4. すぐできる一般的対処法 N 選(SEO の網)
 5. マンジャロ視点の解説(添付文書・臨床試験出典)
-6. 医師に伝える記録ポイント `box`
-7. Q&A
-8. まとめ `box`
-9. 末尾ディスクレーマー `<blockquote>`
+6. **MID アセット(比較表)** — 記事中盤、文脈が自然な位置に。**誘導文ナシで単独で置く**(アセット自体が広告)
+7. 医師に伝える記録ポイント `box`
+8. Q&A
+9. まとめ `box`
+10. **END ブロック([[memory: feedback-article-closing]])**:
+    - 誘導文 intro(`<p class="closing-lead">`)
+    - 比較表アセット(`<div class="clinic-compare">`)
+    - 誘導文 outro(`<p class="closing-outro">`)
+11. 末尾ディスクレーマー `<blockquote>`
+
+### 比較表アセットの HTML テンプレ
+
+```html
+<div class="clinic-compare" data-position="...">
+<div class="clinic-compare__title">マンジャロ 2.5mg / 1ヶ月 価格比較</div>
+<table>
+<thead>
+<tr><th>クリニック</th><th>2.5mg / 1ヶ月</th></tr>
+</thead>
+<tbody>
+<tr class="clinic-compare__highlight">
+<td><strong>DMM オンラインクリニック</strong><span class="clinic-compare__badge">クーポン適用</span></td>
+<td><span class="clinic-compare__original">¥17,100</span><span class="clinic-compare__discounted">¥14,800</span></td>
+</tr>
+<tr><td>クリニックフォア</td><td>¥18,800</td></tr>
+<tr><td>イースト駅前クリニック</td><td>¥21,100</td></tr>
+</tbody>
+</table>
+<a class="clinic-compare__cta" href="https://clinic.dmm.com/?coupon=diman161003v" target="_blank" rel="noopener">
+クーポンを受け取る →
+</a>
+<p class="clinic-compare__note">
+※ 上記は各クリニックの公表情報をもとに整理した参考価格(税込・自由診療)。最新の料金・クーポン条件は各公式サイトをご確認ください。
+</p>
+</div>
+```
+
+### END 誘導文の書き方(私目線・友達感)
+
+intro 例: 「ここまで読んで『やってみてもいいかも』と思ったら、まずは価格を見比べておくと安心です…」
+
+outro 例: 「DMM オンラインクリニックは上のリンクからそのままクーポンが適用される URL になっています。『とりあえず話だけ聞いてみる』のもアリです。」
+
+「最安」「絶対」NG、「条件で選ぶなら DMM が候補」型の合法強コピーを使う([[memory: reference-cvr-patterns]])
 
 質問内容に応じて構成は柔軟調整(「効果系」「料金系」「保険系」などはそれぞれの定石で)。
 
