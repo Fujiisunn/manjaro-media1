@@ -42,12 +42,37 @@ const fullTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
         const STORAGE_KEY = 'glp-navi-coupon-applied';
         const applyButtons = document.querySelectorAll('.clinic-compare__apply');
 
+        // URL に ?reset があれば sessionStorage クリア(検証用)
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.has('reset')) {
+            sessionStorage.removeItem(STORAGE_KEY);
+            history.replaceState(null, '', window.location.pathname);
+          }
+        } catch (e) {}
+
         function applyAll() {
           compares.forEach((c) => c.classList.add('is-applied'));
           applyButtons.forEach((a) => {
             a.textContent = '公式サイトで使う →';
           });
         }
+
+        function resetAll() {
+          compares.forEach((c) => c.classList.remove('is-applied'));
+          applyButtons.forEach((a) => {
+            a.textContent = 'クーポンを適用する →';
+          });
+          try { sessionStorage.removeItem(STORAGE_KEY); } catch (err) {}
+        }
+
+        // 検証用リセットリンクを wire up
+        document.querySelectorAll('[data-coupon-reset]').forEach((el) => {
+          el.addEventListener('click', (e) => {
+            e.preventDefault();
+            resetAll();
+          });
+        });
 
         // セッション内で既に適用済みなら最初から表示
         try {

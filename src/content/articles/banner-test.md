@@ -7,6 +7,10 @@ draft: true
 thumb: articles/manjaro-beginner-guide.png
 ---
 
+<div style="background: #fff7e6; border: 1px solid #f5d590; border-radius: 6px; padding: 0.5rem 0.9rem; margin-bottom: 1rem; font-size: 0.78rem; color: #92400e; text-align: center;">
+[検証用] <a href="#" data-coupon-reset style="color: #92400e; text-decoration: underline; font-weight: 700;">クーポン適用状態をリセット</a> / または URL に <code>?reset</code> を付加
+</div>
+
 「ダイエットで何やっても続かない…マンジャロが気になるけど、副作用とかリスクが怖い」「打ち方ってどうやるの？月1でも効くって本当？」。マンジャロを検討中の方からよく聞かれる質問をまとめました。
 
 結論からお伝えすると、マンジャロ(チルゼパチド)は <mark>添付文書上、週1回の皮下注射として用法が定められている</mark> 医療用医薬品です(出典:チルゼパチド添付文書、メーカー(Eli Lilly Japan)公表情報)。副作用・打ち方・頻度はすべて添付文書に基づいて決まっており、自己流のアレンジは推奨されません。
