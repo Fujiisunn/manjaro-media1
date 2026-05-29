@@ -1,11 +1,10 @@
 import { defineConfig } from 'astro/config';
 
-// GitHub Pages サブパス用 base。
-// カスタムドメイン移行時は BASE を '/' に、site を本ドメインに差し替える。
-const BASE = '/manjaro-media1';
+// カスタムドメイン (glp-navi.com) 配下、ルート配信
+const BASE = '/';
 
 export default defineConfig({
-  site: 'https://fujiisunn.github.io',
+  site: 'https://glp-navi.com',
   base: BASE,
   trailingSlash: 'always',
 });

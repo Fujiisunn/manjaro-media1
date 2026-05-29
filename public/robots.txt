@@ -1,2 +1,2 @@
 User-agent: *
-Disallow: /manjaro-media1/preview/
+Disallow: /preview/
