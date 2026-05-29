@@ -53,9 +53,10 @@ draft: true
 <tr class="clinic-compare__reveal-row">
 <td>
 <strong>ダイエットビューティー</strong>
+<span class="clinic-compare__badge clinic-compare__badge--diet">ゆいぴすクーポン適用</span>
 <span class="clinic-compare__ambassador">※ゆいぴす公式アンバサダー</span>
 </td>
-<td>¥18,000</td>
+<td>¥17,000</td>
 <td>¥36,000</td>
 <td>¥54,000</td>
 <td>—</td>
@@ -134,9 +135,10 @@ draft: true
 <tr class="clinic-compare__reveal-row">
 <td>
 <strong>ダイエットビューティー</strong>
+<span class="clinic-compare__badge clinic-compare__badge--diet">ゆいぴすクーポン適用</span>
 <span class="clinic-compare__ambassador">※ゆいぴす公式アンバサダー</span>
 </td>
-<td>¥18,000</td>
+<td>¥17,000</td>
 <td>¥36,000</td>
 <td>¥54,000</td>
 <td>—</td>

@@ -838,6 +838,13 @@ img {
   line-height: 1.4;
 }
 
+/* diet beauty 専用バッジ(常にピンク、apply状態に依存しない) */
+.article-body .clinic-compare__badge.clinic-compare__badge--diet,
+.article-body .clinic-compare.is-applied .clinic-compare__badge.clinic-compare__badge--diet {
+  background: #db2777;
+  color: #fff;
+}
+
 /* 適用クリック後にだけ表示される行(ダイエットビューティー等) */
 .article-body tr.clinic-compare__reveal-row {
   display: none;
